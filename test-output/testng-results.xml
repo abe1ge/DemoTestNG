@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default Suite" duration-ms="6266" started-at="2016-11-11T15:52:46Z" finished-at="2016-11-11T15:52:52Z">
+    <groups>
+    </groups>
+    <test name="DemoTestNG" duration-ms="6266" started-at="2016-11-11T15:52:46Z" finished-at="2016-11-11T15:52:52Z">
+      <class name="com.testNG.DemoTestNG.DemoTestNGTest">
+        <test-method status="PASS" signature="gmailLogin()[pri:0, instance:com.testNG.DemoTestNG.DemoTestNGTest@511baa65]" name="gmailLogin" duration-ms="6258" started-at="2016-11-11T15:52:46Z" finished-at="2016-11-11T15:52:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- gmailLogin -->
+      </class> <!-- com.testNG.DemoTestNG.DemoTestNGTest -->
+    </test> <!-- DemoTestNG -->
+  </suite> <!-- Default Suite -->
+</testng-results>
