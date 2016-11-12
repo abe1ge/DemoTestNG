@@ -9,6 +9,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 /**
@@ -18,21 +20,28 @@ import org.testng.annotations.Test;
 
 public class DemoTestNGTest {
 
+    private WebDriver driver;
 
-
-    @Test
-    public void gmailLogin() {
-        // objects and variables instantiation
-
-        System.setProperty("webdriver.gecko.driver", "C:\\Users\\Administrator\\docker git\\selenium\\google-test\\geckodriver.exe");
-        WebDriver driver = new FirefoxDriver();
-        String appUrl = "https://accounts.google.com";
+    @BeforeTest
+    public void setupSelenium()
+    {
+        System.setProperty("webdriver.gecko.driver", "C:\\Users\\work\\Documents\\git hub\\selenium\\DemoTestNG\\geckodriver.exe");
+        //WebDriver driver = new FirefoxDriver();
+        driver = new FirefoxDriver();
 
         //instantiating the wait command and setting the maximum time to wait in seconds (4)
+
+    }
+
+    @Test
+    public void gmailLogin()
+    {
+        // objects and variables instantiation
+
+
         WebDriverWait wait = new WebDriverWait(driver, 4);
 
-
-
+        String appUrl = "https://accounts.google.com";
         // launch the firefox browser and open the application url
         driver.get(appUrl);
 
@@ -69,8 +78,12 @@ public class DemoTestNGTest {
         WebElement SignInButton = driver.findElement(By.id("signIn"));
         SignInButton.click();
 
-        // close the web browser
-        driver.close();
+    }
 
+    @AfterTest
+    public void closBrowser()
+    {
+        // close the web browser
+        driver.quit();
     }
 }

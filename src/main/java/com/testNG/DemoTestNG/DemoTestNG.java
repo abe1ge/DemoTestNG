@@ -1,5 +1,6 @@
 package com.testNG.DemoTestNG;
 
+import org.apache.xpath.operations.String;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,15 +11,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Created by Administrator on 11/11/2016.
  */
+
 public class DemoTestNG {
 
     public void main(String[] args) {
         // objects and variables instantiation
 
-        System.setProperty("webdriver.gecko.driver", "C:\\Users\\Administrator\\docker git\\selenium\\google-test\\geckodriver.exe");
+        //need to change this to where the geckodriver.exe is located
+        System.setProperty("webdriver.gecko.driver", "..\\DemoTestNG\\geckodriver.exe");
         WebDriver driver = new FirefoxDriver();
 
-        String appUrl = "https://accounts.google.com";
+        java.lang.String appUrl = "https://accounts.google.com";
 
         //instantiating the wait command and setting the maximum time to wait in seconds (4)
         WebDriverWait wait = new WebDriverWait(driver, 4);
@@ -30,10 +33,10 @@ public class DemoTestNG {
         driver.manage().window().maximize();
 
         //declare and initialize the variabl to store the expected title of the webpage
-        String expectedTitle = "Sign in - Google Accounts";
+        java.lang.String expectedTitle = "Sign in - Google Accounts";
 
         //fetch the title of the webpage and save it into a string
-        String actualTitle = driver.getTitle();
+        java.lang.String actualTitle = driver.getTitle();
 
         // compare the expected title of the page with the actual title of the page and print the result
         if (expectedTitle.equals(actualTitle)) {
