@@ -659,7 +659,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478995528033</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="updated the pom.xml to allow maven to build the project and added geckodriver">
+      <created>1478995572953</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1478995572953</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -738,7 +745,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="main class" />
     <MESSAGE value="updated the pom.xml to allow maven to build the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated the pom.xml to allow maven to build the project" />
+    <MESSAGE value="updated the pom.xml to allow maven to build the project and added geckodriver" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated the pom.xml to allow maven to build the project and added geckodriver" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
