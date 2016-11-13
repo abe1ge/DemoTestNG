@@ -2,16 +2,18 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default Suite" duration-ms="21421" started-at="2016-11-12T18:55:05Z" finished-at="2016-11-12T18:55:26Z">
+  <suite name="Default Suite" duration-ms="58455" started-at="2016-11-13T01:07:54Z" finished-at="2016-11-13T01:08:52Z">
     <groups>
     </groups>
-    <test name="DemoTestNG" duration-ms="21421" started-at="2016-11-12T18:55:05Z" finished-at="2016-11-12T18:55:26Z">
+    <test name="DemoTestNG" duration-ms="58455" started-at="2016-11-13T01:07:54Z" finished-at="2016-11-13T01:08:52Z">
       <class name="com.testNG.DemoTestNG.DemoTestNGTest">
-        <test-method status="PASS" signature="gmailLogin()[pri:0, instance:com.testNG.DemoTestNG.DemoTestNGTest@39ba5a14]" name="gmailLogin" duration-ms="21402" started-at="2016-11-12T18:55:05Z" finished-at="2016-11-12T18:55:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- gmailLogin -->
-      </class> <!-- com.testNG.DemoTestNG.DemoTestNGTest -->
-    </test> <!-- DemoTestNG -->
-  </suite> <!-- Default Suite -->
+        <test-method status="PASS" signature="setupSelenium()[pri:0, instance:com.testNG.DemoTestNG.DemoTestNGTest@ea4a92b]" name="setupSelenium" is-config="true" duration-ms="19366" started-at="2016-11-13T01:07:54Z" finished-at="2016-11-13T01:08:13Z">
+        </test-method>
+        <test-method status="PASS" signature="gmailLogin()[pri:0, instance:com.testNG.DemoTestNG.DemoTestNGTest@ea4a92b]" name="gmailLogin" duration-ms="39022" started-at="2016-11-13T01:08:13Z" finished-at="2016-11-13T01:08:52Z">
+        </test-method>
+        <test-method status="PASS" signature="closBrowser()[pri:0, instance:com.testNG.DemoTestNG.DemoTestNGTest@ea4a92b]" name="closBrowser" is-config="true" duration-ms="20" started-at="2016-11-13T01:08:52Z" finished-at="2016-11-13T01:08:52Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
 </testng-results>

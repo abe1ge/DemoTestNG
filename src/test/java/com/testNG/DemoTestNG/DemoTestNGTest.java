@@ -80,10 +80,64 @@ public class DemoTestNGTest {
 
     }
 
+    @Test
+    public void googleSearch()
+    {
+        WebDriverWait wait = new WebDriverWait(driver, 4);
+        String expectedTitle = "Java - Google Search";
+        String searchTerm = "Java";
+
+        String appUrl = "https://www.google.com";
+        // launch the firefox browser and open the application url
+        driver.get(appUrl);
+
+
+        //Clear the search box and type searchTerm
+        driver.findElement(By.cssSelector("#lst-ib")).clear();
+        driver.findElement(By.cssSelector("#lst-ib")).sendKeys(searchTerm + "\n");
+
+        //wait until the Passwd elempent is present
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("#ab_opt_icon")));
+
+        //fetch the title of the webpage and save it into a string
+        String actualTitle = driver.getTitle();
+
+        //compare expected titial with actual title
+        Assert.assertEquals(expectedTitle, actualTitle);
+
+
+    }
+
+    public void stackOverflow()
+    {
+        WebDriverWait wait = new WebDriverWait(driver, 4);
+        String expectedTitle = "Java - Google Search";
+        String searchTerm = "Stack overflow";
+
+        String appUrl = "https://www.google.com";
+        // launch the firefox browser and open the application url
+        driver.get(appUrl);
+
+
+        //Clear the search box and type searchTerm
+        driver.findElement(By.cssSelector("#lst-ib")).clear();
+        driver.findElement(By.cssSelector("#lst-ib")).sendKeys(searchTerm + "\n");
+
+        //wait until the Passwd elempent is present
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("#ab_opt_icon")));
+
+        //fetch the title of the webpage and save it into a string
+        String actualTitle = driver.getTitle();
+
+        //compare expected titial with actual title
+        Assert.assertEquals(expectedTitle, actualTitle);
+
+
+    }
     @AfterTest
     public void closBrowser()
     {
         // close the web browser
-        driver.quit();
+        driver.close();
     }
 }
