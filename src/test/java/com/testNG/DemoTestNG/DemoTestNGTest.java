@@ -25,7 +25,8 @@ public class DemoTestNGTest {
     @BeforeTest
     public void setupSelenium()
     {
-        System.setProperty("webdriver.gecko.driver", "C:\\Users\\work\\Documents\\git hub\\selenium\\DemoTestNG\\geckodriver.exe");
+        String currentDir = System.getProperty("user.dir");
+        System.setProperty("webdriver.gecko.driver", currentDir + "geckodriver.exe");
         //WebDriver driver = new FirefoxDriver();
         driver = new FirefoxDriver();
 
